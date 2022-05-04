@@ -1,0 +1,165 @@
+/* nunito-300 - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),
+        url('../fonts/nunito-v23-latin_cyrillic-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/nunito-v23-latin_cyrillic-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-600 - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    src: local(''),
+        url('../fonts/nunito-v23-latin_cyrillic-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/nunito-v23-latin_cyrillic-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* nunito-900 - latin_cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+        url('../fonts/nunito-v23-latin_cyrillic-900.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/nunito-v23-latin_cyrillic-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+button {
+    font: inherit;
+}
+
+.header {
+    padding: 13px 0;
+    background-color: #296C82;
+}
+
+.header__container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+
+}
+
+.header__title {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 150%;
+
+    color: #FFFFFF;
+}
+
+.main {
+
+}
+
+.main__title {
+
+}
+
+.main__box {
+
+}
+
+.selection {
+
+}
+
+.selection__list {
+
+}
+
+.selection__item {
+
+}
+
+.selection__theme {
+
+}
+
+.selection__result {
+
+}
+
+.selection__result-ratio {
+
+}
+
+.selection__result-text {
+
+}
+
+.main__box--question {
+
+}
+
+.main__form-question {
+
+}
+
+.main__subtitle {
+
+}
+
+.answer {
+
+}
+
+.answer__checkbox {
+
+}
+
+.main__btn {
+
+}
+
+.question__next {
+
+}
+
+.answer__radio {
+
+}
+
+.main__box--result {}
+
+.result {}
+
+.main__subtitle--result {}
+
+.result__box {}
+
+.result__ratio {}
+
+.result__text {}
+
+.result__return {}
