@@ -1,5 +1,5 @@
 
-
+import { html } from 'lit-html'
 
     
 function elementFromHtml(html) {
@@ -13,7 +13,7 @@ function elementFromHtml(html) {
 
 const myList = elementFromHtml(`
     <ul>
-        <li>Контент</li>
+        <li class="павпва">Контент</li>
     </ul>
 `)
 
