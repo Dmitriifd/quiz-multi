@@ -171,11 +171,9 @@ const showResult = (result, quiz) => {
 
     block.append(button);
     main.append(block);
+    showElem(block);
     button.addEventListener('click', () => {
-        hideElem(block, () => {
-            showElem(title);
-            showElem(selection);
-        })
+        hideElem(block, initQuiz)
     });
 
 }
@@ -183,13 +181,17 @@ const showResult = (result, quiz) => {
 
 
 const renderQuiz = (quiz) => {
-    hideElem(title);
-    hideElem(selection);
+    
 
     const questionBox = document.createElement('div');
     questionBox.className = 'main__box main__box--question';
 
-    main.append(questionBox);
+    hideElem(title);
+    hideElem(selection, () => {
+        showElem(questionBox);
+        main.append(questionBox);
+    });
+
 
     let result = 0;
     let questionCount = 0;
@@ -219,7 +221,7 @@ const renderQuiz = (quiz) => {
         fieldset.append(legend, ...answersData.labels);
         form.append(fieldset, button);
         questionBox.append(form);
-
+        showElem(form);
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             let ok = false;
@@ -239,9 +241,10 @@ const renderQuiz = (quiz) => {
                 if (questionCount < quiz.list.length) {
                     showQuestion();
                 } else {
-                    hideElem(questionBox);
-                    showResult(result, quiz);
-                    saveResult(result, quiz.id)
+                    saveResult(result, quiz.id);
+                    hideElem(questionBox, () => {
+                        showResult(result, quiz);
+                    });
                 }
             } else {
                 form.classList.add('main__form-question--error');
@@ -268,6 +271,9 @@ const addClick = (buttons, data) => {
 const initQuiz = async () => {
 	const data = await getData();
 	const buttons = renderTheme(data);
+
+    showElem(title);
+    showElem(selection);
 
 	addClick(buttons, data);
 };
